@@ -14,16 +14,17 @@ The primary objective of this project is to develop a predictive model to foreca
 This project employs both simple and complex methods to predict Nvidia stock volumes. The methods used fall into two main categories:
 
 ### Simple Methods:
-- `Simple Smoothing (Simple Moving Average-SMA)`: Simple smoothing calculates the average of a set of observations over a given time interval. It is useful when the data show little variability and do not exhibit complex trends or seasonality.
+- `Simple Smoothing (Simple Moving Average-SMA)`: Calculates the average of a set of observations over a given time interval. It is useful when the data show little variability and do not exhibit complex trends or seasonality.
 
-- `Double Exponential Smoothing`: This method consider both, the level and the trend of the data. It is particularly useful when the data exhibits a linear trend, either increasing or decreasing, over time. The approach adjusts the forecast not only based on the recent observations but also accounts for the trend, making it more responsive to changes in the direction of the data.
+- `Double Exponential Smoothing`: This method considers both the level and the trend of the data. It is useful when the data shows a linear trend, either increasing or decreasing. The forecast adjusts based on recent observations and changes in the trend.
 
-- `Holt-Winters`: The Holt-Winters method is an extension of smoothing methods, which includes trend and seasonality components. This approach is suitable for data that exhibit both an increasing or decreasing trend and regular seasonal patterns. The model is divided into three key components: level, trend, and seasonality. It is very effective for predicting time series with strong seasonality and can be used for data with both additive and multiplicative seasonality.
+- `Holt-Winters`: Extends smoothing techniques by adding trend and seasonality components. It is suited for data with both trends and regular seasonal patterns. The model separates the time series into level, trend, and seasonality components.
+
+
 
 ### Complex Methods:
-- `ARIMA (AutoRegressive Integrated Moving Average)`: The ARIMA model is one of the most widely used models for time series prediction, especially when the data are stationary or can be transformed into stationary data through differencing. ARIMA combines three key components: autoregression (AR), moving average (MA), and differencing (D), making it a powerful approach for capturing linear patterns in data. In this project, ARIMA is used to model trends and temporal dependencies in Nvidia stock volumes, especially when the data exhibits complex long-term behavior.
-
-- `AutoARIMA`: AutoARIMA is an automatic extension of the ARIMA model that uses automated model and parameter selection methods. This facilitates model optimization without manual intervention, which can save time and improve model accuracy. AutoARIMA automatically selects the best ARIMA model for the available data, based on criteria such as the Akaike Information Criterion (AIC) or the Bayesian Information Criterion (BIC).
+- `ARIMA (AutoRegressive Integrated Moving Average)`: The ARIMA model is widely used for time series prediction, particularly with stationary or differenced data. It combines autoregression, moving average, and differencing to capture linear patterns. In this project, ARIMA models trends and temporal dependencies in Nvidia stock volumes.
+- `AutoARIMA`: AutoARIMA extends ARIMA by automating model and parameter selection. It optimizes the model without manual intervention, improving efficiency and accuracy. Selection is based on criteria like AIC and BIC to find the best fit for the data.
 
 
 ## Model Evaluation:
