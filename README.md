@@ -26,12 +26,7 @@ This project employs both simple and complex methods to predict Nvidia stock vol
 - `ARIMA (AutoRegressive Integrated Moving Average)`: The ARIMA model is widely used for time series prediction, particularly with stationary or differenced data. It combines autoregression, moving average, and differencing to capture linear patterns. In this project, ARIMA models trends and temporal dependencies in Nvidia stock volumes.
 - `AutoARIMA`: AutoARIMA extends ARIMA by automating model and parameter selection. It optimizes the model without manual intervention, improving efficiency and accuracy. Selection is based on criteria like AIC and BIC to find the best fit for the data.
 
-
 ## Model Evaluation:
-Predictive Performance: Throughout the project, models will be evaluated using standard prediction error metrics such as RMSE (Root Mean Square Error) and MAE (Mean Absolute Error).
-
-
-## Evaluación del Modelo
 
 Throughout the project, the models will be evaluated using standard prediction error metrics, such as **RMSE** (Root Mean Square Error), which measures the magnitude of the error between predictions and actual values, penalizing large errors due to the square of the differences; **MAE** (Mean Absolute Error), which calculates the average of the absolute errors between predictions and actual values, making it more robust to outliers; and **MSE** (Mean Squared Error), which measures the average of the squared errors and penalizes large errors more heavily, making it a useful metric when minimizing error variance.
 
